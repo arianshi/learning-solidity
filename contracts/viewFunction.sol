@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.23;
 
-contract View {
+contract ViewFunction {
    uint256 Num1 = 2;
    uint256 Num2 = 8;
 
