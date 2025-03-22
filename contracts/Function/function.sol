@@ -25,6 +25,4 @@ contract LearnFunction {
         hey =  newNumber;
         return hey;
     }
-
-
 }
