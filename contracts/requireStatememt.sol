@@ -4,6 +4,7 @@ pragma solidity ^0.8.23;
 contract RequireErrorHandler {
     
     function check(uint256 _input) public pure returns(string memory) {
+        // param1: conditional, param2: error messages
         require(_input >= 0, "invalid uint8");
         // revert The transaction has been reverted to the initial state. Reason provided by the contract: "invalid uint8".
         require(_input <= 255, "invalid uint8");
