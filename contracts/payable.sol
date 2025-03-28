@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.23;
-import "hardhat/console.sol";
 
-contract Payable {
+contract PayableToSender {
     // Payable address can receive Ether
     address payable public owner;
 
@@ -29,8 +28,6 @@ contract Payable {
         // address(this) refers to the address of the instance of the contract where the call is being made.
         uint amount = address(this).balance;
 
-        console.log("address----", address(this));
-
         // send all Ether to owner
         // Owner can receive Ether since this address of owner is payable
 
@@ -42,9 +39,9 @@ contract Payable {
     // _to Contract account to be credited
     function transfer(address payable _to, uint _amount) public {
           // Note that _to is declared as payable
-           console.log("_to----", _to);
+
           (bool success, ) = _to.call{ value: _amount }("");
-           console.log("success----", success);
+   
           require(success, "Failed to send Ether");
     }
 }
