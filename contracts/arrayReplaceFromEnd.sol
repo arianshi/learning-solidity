@@ -12,6 +12,11 @@ contract ArrayReplaceFromEnd {
    }
 
    function test() public {
+    // 0, 1, 2, 3
+    // 1  23 4 45 
+    // Frist change position and then delete last element 
+    // 1  45 4 (23)  
+  
      arr = [1, 23, 4, 45];
      // [1, 45, 4]
      remove(1);
