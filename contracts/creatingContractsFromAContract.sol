@@ -9,7 +9,8 @@ contract Car {
     constructor(address _owner, string memory _model) payable {
        owner = _owner;
        model = _model;
-       carAddr = address(0);
+       // current contract address
+       carAddr = address(this);
     }
 }
 
@@ -22,7 +23,7 @@ contract CarFactory {
     }
     
     function createAndSendEther(address _owner, string memory _model) public payable {
-        Car car = (new Car){ value : msg.value }(_owner, _model);
+        Car car = (new Car){ value:msg.value }(_owner, _model);
         cars.push(car);
     }
 
@@ -44,7 +45,7 @@ contract CarFactory {
           cars.push(car);
     }
 
-    function getCar(uint _index) public  view returns (
+    function getCar(uint _index) public view returns (
         address owner,
         string memory model,
         address carAddr,
