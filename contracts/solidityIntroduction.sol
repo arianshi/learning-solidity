@@ -1,3 +1,4 @@
+// Learning: https://www.youtube.com/watch?v=dTzoKx4f6P8&list=PLWUCKsxdKl0oksYr6IG_wRsaSUySQC0ck&index=2
 /*
 Rust: fast but no community no libraries support
 Vyper: some libraries
